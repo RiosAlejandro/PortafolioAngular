@@ -1,14 +1,14 @@
-<main class="principal">
+<main class="principal" *ngFor="let item of proyectos">
   <hr>
   <div class="row areaPrincipal">
     <div class="col-md-6 areaImg">
       <img class="imgPrincipal" src="../../../assets/img/main.png" alt="proyecto uno">
     </div>
     <div class="col-md-6 descripcionPrincipal">
-      <h3>Agyle Intelligence</h3>
-      <p>A platform for automating data collection and reporting throughout teams, operations and supply chains.</p>
+      <h3>{{ item.nombre }}</h3>
+      <p>{{ item.descripcion }}</p>
       <button type="button" class="btn btn1">Ver más</button>
-      <button type="button" class="btn btn2">Código</button>
+       <a href="{{ item.git }}" target="_blank"><button type="button" class="btn btn2">Código</button></a> 
     </div>
   </div>
 </main>
